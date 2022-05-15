@@ -11,6 +11,8 @@ import java.util.Optional;
 
 public class MemberService {
 
+
+
     private final MemberRepository memberRepository;
 
     public MemberService(MemberRepository memberRepository){
@@ -23,10 +25,8 @@ public class MemberService {
     public Long join(Member member){
         // 같은 이름이 있느 중복 회원 X
         validateDuplicateMember(member); // 중복 회원 검증
-
         memberRepository.save(member);
         return member.getId();
-
     }
 
     private void validateDuplicateMember(Member member) {
