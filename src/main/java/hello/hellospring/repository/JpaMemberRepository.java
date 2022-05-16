@@ -20,6 +20,7 @@ public class JpaMemberRepository implements MemberRepository{
         return member;
     }
 
+    //test Github 커밋!
     @Override
     public Optional<Member> findById(Long id) {
         Member member =  em.find(Member.class, id);
