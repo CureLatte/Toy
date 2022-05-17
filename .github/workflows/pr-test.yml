@@ -20,5 +20,5 @@ jobs:
         run: chmod +x gradlew
 
       # Gradle test를 실행한다
-      - name: Test with Gradle
-        run: ./gradlew --info test
+#      - name: Test with Gradle
+#        run: ./gradlew --info test
