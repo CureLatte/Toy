@@ -43,7 +43,7 @@ public class HelloController {
     }
 
     // Hello 객체 생성
-   static class Hello{
+    static class Hello{
         private String name;
 
         // Java bin 표준 방식 Getter Setter
@@ -55,4 +55,10 @@ public class HelloController {
             this.name = name;
         }
     }
+
+    @GetMapping("test")
+    public String test(@RequestParam("name") String name){
+        return "test";
+    }
+
 }
