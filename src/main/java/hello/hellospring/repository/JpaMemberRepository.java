@@ -20,6 +20,7 @@ public class JpaMemberRepository implements MemberRepository{
         return member;
     }
 
+    //test Github 커밋!
     @Override
     public Optional<Member> findById(Long id) {
         Member member =  em.find(Member.class, id);
@@ -37,7 +38,7 @@ public class JpaMemberRepository implements MemberRepository{
 
     @Override
     public List<Member> findAll() {
-        // 객체를 대상으로 query 를 날리는 것
+        // 객체를 대상으로 query 를 날리는 것ddfd
         return em.createQuery("select m from Member m", Member.class).getResultList();
     }
 }
